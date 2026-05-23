@@ -1,0 +1,19 @@
+@AbapCatalog.viewEnhancementCategory: [#NONE]
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'PROJECTION VEIW ENTITY FOR BOOKING'
+define view entity ZC_2026BOOKING as projection on ZR_2026BOOKING
+{
+    key TravelId,
+    key BookingId,
+    BookingDate,
+    CustomerId,
+    CarrierId,
+    ConnectionId,
+    FlightDate,
+    FlightPrice,
+    CurrencyCode,
+    BookingStatus,
+    LastChangedAt,
+    /* Associations */
+    _Travel : redirected to parent ZC_2026TRAVEL 
+}
